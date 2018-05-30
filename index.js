@@ -18,7 +18,7 @@ io.on("connection", function(socket){
   socket.on("Client-send-data", function(data){
     console.log(socket.id  + " vua gui: " + data);
 
-    // socket.broadcast.emit("Server-send-data", data + "888");
+    socket.broadcast.emit("Server-send-data", data + "888");
   });
 });
 
