@@ -14,6 +14,12 @@ io.on("connection", function(socket){
   socket.on("disconnect", function(){
     console.log(soket.id + "nguoi dung ngat ket noi!!");
   });
+
+  socket.on("Client-send-data", function(data){
+    console.log(socket.id  + " vua gui: " + data);
+
+    // socket.broadcast.emit("Server-send-data", data + "888");
+  });
 });
 
 app.get("/", function(req, res){
